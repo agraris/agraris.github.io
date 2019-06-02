@@ -1,0 +1,173 @@
+---
+layout: default
+---
+
+<!-- HEADER START -->
+<style type="text/css">
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+
+    .page-name {
+        background-image: url("assets/images/slide-1.jpg");
+        background-size: cover;
+        min-height: 100%;
+    }
+
+    .vertical-center {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+    }
+</style>
+
+<section id="top" class="page-name parallax" data-paroller-factor="0.1" data-paroller-type="background" data-paroller-direction="vertical">
+    <div class="container vertical-center">
+        <div class="text-center mb40">
+            <a href="{{ site.url }}" class="logo">
+                <img src="{{ site.url }}{{ site.logo_med }}" alt="" class="img-fluid inline-block">
+            </a>
+        </div>
+        <!-- <h1 class="display-2 page-title d-none d-md-block">
+            {{ site.title }}
+        </h1> -->
+        <div class="social-content text-center mt30 h2">
+            {% include social.html %}
+        </div>
+    </div>
+</section>
+<!-- HEADER END -->
+<!-- CONTENT START -->
+<section class="pt150">
+    <div class="title-bl text-center wow fadeIn" data-wow-duration="2s">
+        <div class="title color-white">
+            Games
+        </div>
+        <div class="subtitle">
+            Released Games
+        </div>
+    </div>
+    {% assign sorted = site.games | sort: 'release_date' | reverse %}
+    {% for game in sorted %}
+    <div id="{{ game.title | downcase }}" class="container pt150">
+        <div class="row">
+            <div class="top-bl col">
+                <div class="game-img-slider bg-arrow">
+                    {% for image in game.images %}
+                    <div class="image-wrapper">
+                        <a href="{{ image.image }}" data-lightbox="game-slides">
+                            <img src="{{ image.image }}" alt="{{ game.title }}" class="img-fluid">
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row mt80">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mb30">
+                <div class="tab-head table uppercase fsize-14 fweight-700">
+                    <div class="table-cell valign-middle ws-20 color-1">
+                        {% if game.tags.size > 0 %}
+                            {% for tag in game.tags %}
+                                {{ tag | capitalize }}
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    <time class="table-cell valign-middle text-right color-1" datetime="{{ game.release_date | date:'%Y-%m-%d' }}">{{ game.date | date_to_string }}</time>
+                </div>
+                <div class="uppercase fsize-32 fweight-700 font-agency color-white lheight-normal">
+                    {{ game.title }}
+                </div>
+                <div class="mt30 lheight-26 fweight-300">
+                    {{ game.content }}
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mb30 d-table text-center mt70">
+                {% if game.google_play %}
+                <a href="{{ game.google_play }}"><img class="img-fluid p-3 w-50" alt="Get it on Google Play" src="{{ '/assets/images/store/google-play-badge.png' | prepend: site.baseurl }}"></a>
+                {% endif %}
+                {% if game.app_store %}
+                <a href="{{ game.app_store }}"><img class="img-fluid p-3 w-50" alt="Download on the App Store" src="{{ '/assets/images/store/app-store-badge.png' | prepend: site.baseurl }}"></a>
+                {% endif %}
+                {% if game.microsoft_store %}
+                <a href="{{ game.microsoft_store }}"><img class="img-fluid p-3 w-50" alt="Get it from Microsoft" src="{{ '/assets/images/store/microsoft-store-badge.png' | prepend: site.baseurl }}"></a>
+                {% endif %}
+                {% if game.amazon_appstore %}
+                <a href="{{ game.amazon_appstore }}"><img class="img-fluid p-3 w-50" alt="Available at Amazon Appstore" src="{{ '/assets/images/store/amazon-appstore-badge.png' | prepend: site.baseurl }}"></a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+<!-- CONTENT END -->
+<!-- BLOG SECTION START -->
+<section class="blog-section pt150">
+    <div class="title-bl text-center wow fadeIn" data-wow-duration="2s">
+        <div class="title color-white">
+            Latest Posts
+        </div>
+        <div class="subtitle">
+            Fresh News
+        </div>
+    </div>
+    
+    <div class="each-element ptb150">
+        <div class="container">
+            <div class="row">
+                {% assign postsize = site.posts | size %}
+                {% if postsize == 0 %}
+                <h5>No posts</h5>
+                {% else %}
+                {% for post in paginator.posts %}
+                <div class="item col-lg-4 col-sm-12 item-wrap">
+                    <a href="{{ site.baseurl }}{{ post.url }}" itemprop="url">
+                        <div class="image">
+                            <img src="{{ site.baseurl }}{{ post.featured_image }}" alt="{{ post.title }}" class="img-fluid">
+                        </div>
+                    </a>
+                    <div class="item-info equal-height">
+                        <div class="item-header table fsize-14 fweight-700 uppercase">
+                            <div class="table-cell platform">
+                                {% if post.tags.size > 0 %}
+                                    {% for tag in post.tags %}
+                                        {% if forloop.index == post.tags.size %}
+                                            {{ tag | capitalize }}
+                                        {% else %}
+                                            {{ tag | capitalize }},
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                            <time class="table-cell color-2 text-right" datetime="{{ post.date | date:'%Y-%m-%d' }}">{{ post.date | date_to_string }}</time>
+                        </div>
+                        <div class="item-title mt20" data-trim="40">
+                            <a href="{{ site.baseurl }}{{ post.url }}" itemprop="url">{{ post.title }}</a>
+                        </div>
+                        <div class="item-text mt25 lheight-26" data-trim="130">
+                                {{ post.excerpt | strip_html | truncatewords: 130 }}
+                        </div>
+                    </div>
+                    <div class="author-comment table">
+                        <div class="table-cell valign-middle">
+                            <i class="fa fa-user color-1 fsize-14" aria-hidden="true"></i>
+                            <span class="color-2 ml5">by {{ post.author }}</span>
+                        </div>
+                        <!-- <div class="table-cell valign-middle text-right">
+                            <i class="fa fa-comment color-1 fsize-14" aria-hidden="true"></i>
+                            <span class="color-2 ml5">126</span>
+                        </div> -->
+                    </div>
+                </div>
+                {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- BLOG END -->
+<!-- FOOTER START -->
+{% include footer.html %}
+<!-- FOOTER END -->

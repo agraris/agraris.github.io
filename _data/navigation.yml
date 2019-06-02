@@ -1,0 +1,16 @@
+top-nav:
+  - page: Home
+    url: /#top
+  - page: Games
+    url:
+    subfolderitems:
+      - page: Underdwellers
+        url: /#underdwellers
+
+footer-nav:
+  - page: About
+    url: /about.html
+  - page: Privacy Policy
+    url: /privacy.html
+  - page: Contact
+    url: /contact.html

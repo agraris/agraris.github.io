@@ -1,0 +1,78 @@
+<footer class="footer">
+    <div class="container">
+        <div class="row mb110">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <a href="{{ site.url }}">
+                    <img src="{{ site.url }}{{ site.logo }}" alt="{{ site.title }}">
+                </a>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 text-right">
+                <ul class="footer-menu">
+                    {% if site.data.navigation.footer-nav[0] %}
+                    {% for item in site.data.navigation.footer-nav %}
+                    <li>
+                        <a href="{{ item.url }}">
+                            {{ item.page }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                    {% endif %}
+                </ul>
+                <div class="mt60">
+                    
+                </div>
+                <div class="social-content mt30">
+                    {% include social.html %}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="legal-right ptb30 col">
+                <div class="text-center">
+                    Google Play and the Google Play logo are trademarks of Google LLC.<br />
+                    Microsoft Store and the Microsoft Store logo are trademarks of Microsoft Corporation.<br />
+                    Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries and regions. App Store is a service mark of Apple Inc.<br />
+                    Amazon and its all related logos are trademarks of Amazon.com, Inc. or its affiliates.
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="copyright small ptb30 col-lg-12">
+                <div class="col-6 col-xs-12 float-left">
+                    © Copyright 2018
+                </div>
+                <div class="col-6 col-xs-12 float-right text-right">
+                    All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- <a href="#top" id="toTop" class="color-white">
+        <i class="fa fa-angle-up fsize-14" aria-hidden="true"></i>
+    </a> -->
+
+<script src="{{ '/assets/js/jquery.min.js' | prepend: site.url }}"></script>
+<script src="{{ '/assets/js/popper.min.js' | prepend: site.url }}"></script>
+<script src="{{ '/assets/js/bootstrap.min.js' | prepend: site.url }}"></script>
+<script src="{{ '/assets/js/slick.min.js' | prepend: site.url }}"></script>
+<script src="{{ '/assets/js/jquery.matchHeight-min.js' | prepend: site.url }}"></script>
+<script src="{{ '/assets/js/muuri.min.js' | prepend: site.url }}"></script>
+<script src="{{ '/assets/js/jquery.vide.min.js' | prepend: site.url }}"></script>
+<script src="{{ '/assets/js/jquery.paroller.min.js' | prepend: site.url }}"></script>
+<script src="{{ '/assets/js/video.min.js' | prepend: site.url }}"></script>
+<script src="{{ '/assets/js/jquery.inview.min.js' | prepend: site.url }}"></script>
+<script src="{{ '/assets/js/lightbox.min.js' | prepend: site.url }}"></script>
+<script src="{{ '/assets/js/moment.min.js' | prepend: site.url }}"></script>
+<script src="{{ '/assets/js/wow.min.js' | prepend: site.url }}"></script>
+<script src="{{ '/assets/js/script.js' | prepend: site.url }}"></script>
+
+{% if site.google_analytics %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}');
+</script>
+{% endif %}

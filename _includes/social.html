@@ -1,0 +1,31 @@
+{% if site.facebook_username %}
+<div class="social-list">
+    <a href="https://facebook.com/{{ site.facebook_username }}">
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+    </a>
+</div>
+{% endif %}{% if site.twitter_username %}
+<div class="social-list">
+    <a href="https://twitter.com/{{ site.twitter_username }}">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+    </a>
+</div>
+{% endif %}{% if site.instagram_username %}
+<div class="social-list">
+    <a href="https://instagram.com/{{ site.instagram_username }}">
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+    </a>
+</div>
+{% endif %}{% if site.youtube_username %}
+<div class="social-list">
+    <a href="https://youtube.com/{{ site.youtube_username }}">
+        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+    </a>
+</div>
+{% endif %}{% if site.github_username %}
+<div class="social-list">
+    <a href="https://github.com/{{ site.github_username }}">
+        <i class="fa fa-github" aria-hidden="true"></i>
+    </a>
+</div>
+{% endif %}

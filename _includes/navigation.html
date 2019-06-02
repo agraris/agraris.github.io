@@ -1,0 +1,35 @@
+<header class="navbar navbar-expand fixed-top blur">
+    <div class="container">
+        <a class="navbar-brand d-none d-md-block" href="{{ site.url }}">
+            <img src="{{ site.url }}{{ site.logo }}" alt="" class="img-fluid inline-block">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse main-menu" id="navbarsExample02">
+            <ul class="menu navbar-nav mx-auto ml-md-auto mr-md-0">
+                {% if site.data.navigation.top-nav[0] %}
+                {% for item in site.data.navigation.top-nav %}
+                {% if item.subfolderitems[0] %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Games </a>
+                    <ul class="dropdown-menu dropdown-menu-right sub-menu" aria-labelledby="dropdown04">
+                        {% for subitem in item.subfolderitems %}
+                        <li>
+                            <a class="" href="{{ subitem.url }}">{{ subitem.page }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ item.url }}">{{ item.page }}</a>
+                </li>
+                {% endif %}
+                {% endfor %}
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</header>

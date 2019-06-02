@@ -1,0 +1,46 @@
+---
+layout: default
+---
+{% if page.header_image %}
+<style>
+    .page-name {
+        background-image: url("{{ site.url }}{{ page.header_image }}");
+    }
+</style>
+{% endif %}
+<!-- HEADER START -->
+<section class="page-name parallax" data-paroller-factor="0.1" data-paroller-type="background" data-paroller-direction="vertical">
+    <div class="container">
+        <h1 class="page-title">
+            {{ page.title }}
+        </h1>
+        <div class="breadcrumbs">
+            <a href="{{ site.url }}">Home</a> /
+            <span class="color-1">{{ page.title }}</span>
+        </div>
+    </div>
+</section>
+<!-- HEADER END -->
+<!-- CONTENT START -->
+<section class="ptb150">
+    <div class="container">
+        <div class="col">
+            <div class="post-content mt60">
+                {% if page.featured_image %}
+                <div class="post-image">
+                    <img src="{{ page.featured_image }}" alt="{{ page.title }}" class="img-fluid w-100">
+                </div>
+                {% endif %}
+                <div class="post-bottom background-4">
+                    <div class="p60">
+                        {{ content }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- CONTENT END -->
+<!-- FOOTER START -->
+{% include footer.html %}
+<!-- FOOTER END -->
