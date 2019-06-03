@@ -17,10 +17,10 @@ title: Agraris Entertainment
 email: agrarisentertainment@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   A Game Studio
-logo: /assets/images/logo.png
-logo_med: /assets/images/logo-med.png
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+logo: /assets/images/logo.png
+logo_med: /assets/images/logo-med.png
 paginate:	3
 
 # Post setting
@@ -28,11 +28,11 @@ future: true
 #permalink: /:title/
 
 # Social Media
-facebook_username: agraris
-twitter_username: agraris
-instagram_username: agraris
-youtube_username: agraris
-github_username: agraris
+facebook_username: agrarisent
+twitter_username: agrarisent
+instagram_username: agrarisent
+youtube_username: 
+github_username: 
 
 # Analytics
 google_analytics:
