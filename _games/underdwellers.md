@@ -4,7 +4,7 @@ title: "Underdwellers"
 release_date: 2019-06-01 02:47:24 +0700
 categories: game
 tags: game action platformer
-google_play:
+google_play: https://play.google.com/store/apps/details?id=com.agraris.underdwellers
 app_store:
 microsoft_store:
 amazon_appstore:
