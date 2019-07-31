@@ -75,7 +75,7 @@ layout: default
                             {% endfor %}
                         {% endif %}
                     </div>
-                    <time class="table-cell valign-middle text-right color-1" datetime="{{ game.release_date | date:'%Y-%m-%d' }}">{{ game.date | date_to_string }}</time>
+                    <time class="table-cell valign-middle text-right color-1" datetime="{{ game.release_date | date:'%Y-%m-%d' }}">{{ game.release_date | date_to_string }}</time>
                 </div>
                 <div class="uppercase fsize-32 fweight-700 font-agency color-white lheight-normal">
                     {{ game.title }}
