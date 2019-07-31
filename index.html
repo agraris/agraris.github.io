@@ -51,7 +51,7 @@ layout: default
     </div>
     {% assign sorted = site.games | sort: 'release_date' | reverse %}
     {% for game in sorted %}
-    <div id="{{ game.title | downcase }}" class="container pt150">
+    <div id="{{ game.title | downcase | replace: ' ', '-' }}" class="container pt150">
         <div class="row">
             <div class="top-bl col">
                 <div class="game-img-slider bg-arrow">
