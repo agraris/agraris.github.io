@@ -4,6 +4,8 @@ top-nav:
   - page: Games
     url:
     subfolderitems:
+      - page: Storming Area 15
+        url: /#storming-area-15
       - page: Underdwellers
         url: /#underdwellers
 
