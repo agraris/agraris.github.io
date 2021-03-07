@@ -1,0 +1,7 @@
+# Store
+- url: https://play.google.com/store/apps/dev?id=9167518932625640889
+  name: Google Play
+  icon: /assets/icons/google_play.svg
+- url: https://agraris.itch.io
+  name: Itch.io
+  icon: /assets/icons/itch_io.svg

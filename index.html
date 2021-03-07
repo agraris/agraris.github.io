@@ -27,16 +27,23 @@ layout: default
 <section id="top" class="page-name parallax" data-paroller-factor="0.1" data-paroller-type="background"
     data-paroller-direction="vertical">
     <div class="container vertical-center">
+        {% if site.logo_med %}
         <div class="text-center mb40">
             <a href="{{ site.url }}" class="logo">
-                <img src="{{ site.url }}{{ site.logo_med }}" alt="" class="img-fluid inline-block">
+                <img src="{{ site.url }}{{ site.logo_med }}" alt="{{ site.title }}" class="img-fluid inline-block">
             </a>
         </div>
-        <!-- <h1 class="display-2 page-title d-none d-md-block">
+        {% else %}
+        <h1 class="display-2 page-title d-none d-md-block">
             {{ site.title }}
-        </h1> -->
-        <div class="social-content text-center mt30 h2">
+        </h1>
+        {% endif %}
+        <div class="social-content text-center my-5 h2">
             {% include social.html %}
+        </div>
+        <h2 class="h4 mb-4 text-center">Download our games on</h2>
+        <div class="social-content text-center h2">
+            {% include store.html %}
         </div>
     </div>
 </section>

@@ -1,0 +1,8 @@
+{%- for item in site.data.store -%}
+<div class="social-list">
+    <a title="{{ item.name }}" href="{{ item.url }}" target="_blank" rel="nofollow">
+        <img src="{{ item.icon }}" alt="{{ site.title }}'s {{ item.name }}" width="64" height="64">
+    </a>
+    <p class="font-agency mt-2 h6">{{ item.name }}</p>
+</div>
+{%- endfor -%}
