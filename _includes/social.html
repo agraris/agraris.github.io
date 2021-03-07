@@ -4,28 +4,39 @@
         <i class="fa fa-facebook" aria-hidden="true"></i>
     </a>
 </div>
-{% endif %}{% if site.twitter_username %}
+{% endif %}
+{% if site.twitter_username %}
 <div class="social-list">
     <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
         <i class="fa fa-twitter" aria-hidden="true"></i>
     </a>
 </div>
-{% endif %}{% if site.instagram_username %}
+{% endif %}
+{% if site.instagram_username %}
 <div class="social-list">
     <a href="https://instagram.com/{{ site.instagram_username }}" target="_blank">
         <i class="fa fa-instagram" aria-hidden="true"></i>
     </a>
 </div>
-{% endif %}{% if site.youtube_username %}
+{% endif %}
+{% if site.youtube_username %}
 <div class="social-list">
-    <a href="https://youtube.com/{{ site.youtube_username }}" target="_blank">
+    <a href="https://youtube.com/{{ site.youtube_username }}?sub_confirmation=1" target="_blank">
         <i class="fa fa-youtube-play" aria-hidden="true"></i>
     </a>
 </div>
-{% endif %}{% if site.github_username %}
+{% endif %}
+{% if site.github_username %}
 <div class="social-list">
     <a href="https://github.com/{{ site.github_username }}" target="_blank">
         <i class="fa fa-github" aria-hidden="true"></i>
+    </a>
+</div>
+{% endif %}
+{% if site.itchio_username %}
+<div class="social-list">
+    <a href="https://{{ site.itchio_username }}.itch.io" target="_blank">
+        <i class="fa fa-itchio" aria-hidden="true"></i>
     </a>
 </div>
 {% endif %}

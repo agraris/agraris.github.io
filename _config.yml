@@ -28,11 +28,12 @@ paginate:	3
 #permalink: /:title/
 
 # Social Media
-facebook_username: Agraris-Entertainment-2750521094964752
+facebook_username:
 twitter_username: agrarisent
 instagram_username: agrarisent
-youtube_username: 
-github_username: 
+youtube_username: channel/UCShyKYddJrlk1G98XYdVLAQ
+github_username: agraris
+itchio_username:
 
 # Analytics
 google_analytics:
