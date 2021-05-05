@@ -10,10 +10,6 @@ microsoft_store:
 amazon_appstore:
 itchio_store: <iframe frameborder="0" src="https://itch.io/embed/937894" width="552" height="167"><a href="https://agraris.itch.io/the-shape">The Shape? by Agraris Entertainment</a></iframe>
 images:
-  - image: /assets/images/games/the-shape/the-shape-phone-01.jpg
-  - image: /assets/images/games/the-shape/the-shape-phone-02.jpg
-  - image: /assets/images/games/the-shape/the-shape-phone-03.jpg
-  - image: /assets/images/games/the-shape/the-shape-phone-04.jpg
   - image: /assets/images/games/the-shape/the-shape-tablet-01.jpg
   - image: /assets/images/games/the-shape/the-shape-tablet-02.jpg
   - image: /assets/images/games/the-shape/the-shape-tablet-03.jpg
