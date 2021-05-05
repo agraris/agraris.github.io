@@ -4,6 +4,8 @@ top-nav:
   - page: Games
     url:
     subfolderitems:
+      - page: Animal Drifter
+        url: /#animal-drifter
       - page: The Shape?
         url: /#the-shape
       - page: Storming Area 15
