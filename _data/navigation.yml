@@ -4,7 +4,7 @@ top-nav:
   - page: Games
     url:
     subfolderitems:
-    - page: Crazy Pedicab Driver
+      - page: Crazy Pedicab Driver
         url: /#crazy-pedicab-driver
       - page: Animal Drifter
         url: /#animal-drifter
