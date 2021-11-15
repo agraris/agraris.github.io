@@ -25,19 +25,22 @@ This data is collected via external tools (Software Development Kit or SDK) impl
         <p>Google AdMob (Advertising SDK)</p>
     </li>
     <li style="margin-left: 40px; display: flex">
-        <p>UnityAds (Advertising SDK)</p>
+        <p>Unity Ads (Advertising SDK)</p>
     </li>
     <li style="margin-left: 40px; display: flex">
         <p>Google Firebase (Analytic SDK)</p>
     </li>
     <li style="margin-left: 40px; display: flex">
-        <p>UnityAnalytics (Analytic SDK)</p>
+        <p>Unity Analytics (Analytic SDK)</p>
     </li>
     <li style="margin-left: 40px; display: flex">
-        <p>FacebookSDK (Advertising and Analytic SDK)</p>
+        <p>Facebook SDK (Advertising and Analytic SDK)</p>
     </li>
     <li style="margin-left: 40px; display: flex">
         <p>IronSource (Advertising Mediation SDK)</p>
+    </li>
+    <li style="margin-left: 40px; display: flex">
+        <p>Google Play Games Service (Service SDK)</p>
     </li>
 </ul>
 
@@ -129,5 +132,5 @@ via email to **agrarisentertainment[at]gmail.com**
 
 <br>
 
-##### Last updated; April 28, 2021
+##### Last updated; November 15, 2021
                                 
