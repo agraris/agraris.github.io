@@ -5,3 +5,4 @@ _site
 _games/game-default-format.md
 _posts/2000-12-31-post-default-format.md
 node_modules
+Gemfile.lock
